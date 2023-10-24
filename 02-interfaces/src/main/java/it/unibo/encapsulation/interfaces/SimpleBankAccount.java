@@ -52,7 +52,8 @@ public class SimpleBankAccount implements BankAccount {
         this.transactions ++;
         if (this.getid() == id){
             this.balance += amount;
-        }
+        }else{System.out.println("Error. Invalid user id.");
+                return;}
     }
 
     public void withdraw(final int id, final double amount) {
@@ -68,7 +69,8 @@ public class SimpleBankAccount implements BankAccount {
             if(this.balance < 0){
                 System.out.println("Attenzione! Il conto è in rosso");
             }
-         }
+         }else{System.out.println("Error. Invalid user id.");
+                return;}
     }
 
     public void depositFromATM(final int id, final double amount) {
@@ -81,7 +83,8 @@ public class SimpleBankAccount implements BankAccount {
         this.transactions ++;
         if(this.getid() == id){
             this.balance += (amount - SimpleBankAccount.ATM_TRANSACTION_FEE);
-        }
+        }else{System.out.println("Error. Invalid user id.");
+                return;}
 
     }
 
@@ -96,7 +99,8 @@ public class SimpleBankAccount implements BankAccount {
         this.transactions ++;
         if(this.getid() == id){
             this.balance -= (amount + SimpleBankAccount.ATM_TRANSACTION_FEE);
-        }
+        }else{System.out.println("Error. Invalid user id.");
+                return;}
 
     }
 
@@ -106,6 +110,7 @@ public class SimpleBankAccount implements BankAccount {
          */
         if(this.getid() == id){
             this.balance -= 0;
-        }
+        }else{System.out.println("Error. Invalid user id.");
+                return;}
     }
 }
