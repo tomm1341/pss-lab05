@@ -104,5 +104,8 @@ public class SimpleBankAccount implements BankAccount {
         /*
          * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
          */
+        if(this.getid() == id){
+            this.balance -= 0;
+        }
     }
 }
