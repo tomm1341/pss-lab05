@@ -42,7 +42,12 @@ public class SimpleBankAccount implements BankAccount {
         return this.transactions;
     }
 
-    
+    private void transactionCheck(final int id){
+        this.transactions ++;
+        if (this.getid() == id){
+            
+        }
+    }
 
     public void deposit(final int id, final double amount) {
         /*
