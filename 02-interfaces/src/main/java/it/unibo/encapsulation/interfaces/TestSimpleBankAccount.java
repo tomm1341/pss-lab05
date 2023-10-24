@@ -9,12 +9,12 @@ public class TestSimpleBankAccount {
     }
     public static void main(final String[] args) {
         // 1) Creare l' AccountHolder relativo a Andrea Rossi con id 1
-        AccountHolder user1 = new AccountHolder("Andrea", "Rossi", 1);
+        final AccountHolder user1 = new AccountHolder("Andrea", "Rossi", 1);
         // 2) Creare l' AccountHolder relativo a Alex Bianchi con id 2
-        AccountHolder user2 = new AccountHolder("Alex", "Bianchi", 2);
+        final AccountHolder user2 = new AccountHolder("Alex", "Bianchi", 2);
         // 3) Creare i due SimpleBankAccount corrispondenti
-        SimpleBankAccount acc1 = new SimpleBankAccount(user1.getUserID(), 5000);
-        SimpleBankAccount acc2 = new SimpleBankAccount(user2.getUserID(), 10000);
+        final SimpleBankAccount acc1 = new SimpleBankAccount(user1.getUserID(), 5000);
+        final SimpleBankAccount acc2 = new SimpleBankAccount(user2.getUserID(), 10000);
 
         // 4) Effettuare una serie di depositi e prelievi
         
@@ -35,7 +35,7 @@ public class TestSimpleBankAccount {
          * 5) Stampare a video l'ammontare dei due conti e verificare la
          * correttezza del risultato
          */
-        System.out.println("Gentile "+user1.getName()+" "+user1.getSurname()+", il suo saldo attuale ammonta a: "+acc1.getBalance());
+        System.out.println("Gentile "+user1.getName()+" "+user1.getSurname()+", il suo saldo attuale ammonta a: " + acc1.getBalance());
         System.out.println("Gentile "+user2.getName()+" "+user2.getSurname()+", il suo saldo attuale ammonta a: "+acc2.getBalance());
 
         // 6) Provare a prelevare fornendo un id utente sbagliato
