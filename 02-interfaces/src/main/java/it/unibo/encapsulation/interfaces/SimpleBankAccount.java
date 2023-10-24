@@ -93,7 +93,10 @@ public class SimpleBankAccount implements BankAccount {
          * negativo) - Il prelievo va a buon fine solo se l'id utente
          * corrisponde
          */
-
+        this.transactions ++;
+        if(this.getid() == id){
+            this.balance -= (amount + SimpleBankAccount.ATM_TRANSACTION_FEE);
+        }
 
     }
 
