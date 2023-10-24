@@ -78,6 +78,10 @@ public class SimpleBankAccount implements BankAccount {
          * all'uso dell'ATM (bancomat) Nota: il deposito va a buon fine solo se
          * l'id utente corrisponde
          */
+        this.transactions ++;
+        if(this.getid() == id){
+            this.balance += (amount - SimpleBankAccount.ATM_TRANSACTION_FEE);
+        }
 
     }
 
@@ -89,6 +93,8 @@ public class SimpleBankAccount implements BankAccount {
          * negativo) - Il prelievo va a buon fine solo se l'id utente
          * corrisponde
          */
+
+
     }
 
     public void chargeManagementFees(final int id) {
