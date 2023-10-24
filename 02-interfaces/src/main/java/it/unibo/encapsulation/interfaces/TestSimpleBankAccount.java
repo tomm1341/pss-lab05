@@ -20,28 +20,30 @@ public class TestSimpleBankAccount {
         
         acc1.deposit(1,200);
         acc1.withdrawFromATM(1, 1500);
-        System.out.println("Gentile "+user1.getName()+" "+user1.getSurname()+", il suo saldo attuale ammonta a: "+acc1.getBalance());
         acc1.depositFromATM(1, 400);
         acc1.withdraw(1, 10000);
-        acc1.withdraw(2, 100);
-        System.out.println("Gentile "+user1.getName()+" "+user1.getSurname()+", il suo saldo attuale ammonta a: "+acc1.getBalance());
+        //acc1.withdraw(2, 100);
         
         acc2.deposit(2,500);
         acc2.withdrawFromATM(2, 1500);
-        System.out.println("Gentile "+user2.getName()+" "+user2.getSurname()+", il suo saldo attuale ammonta a: "+acc2.getBalance());
         acc2.depositFromATM(2, 400);
-        acc2.withdraw(1, 10000);
+       // acc2.withdraw(1, 10000);
         acc2.withdraw(2, 5000);
-        System.out.println("Gentile "+user2.getName()+" "+user2.getSurname()+", il suo saldo attuale ammonta a: "+acc2.getBalance());
         
 
         /*
          * 5) Stampare a video l'ammontare dei due conti e verificare la
          * correttezza del risultato
          */
+        System.out.println("Gentile "+user1.getName()+" "+user1.getSurname()+", il suo saldo attuale ammonta a: "+acc1.getBalance());
+        System.out.println("Gentile "+user2.getName()+" "+user2.getSurname()+", il suo saldo attuale ammonta a: "+acc2.getBalance());
 
         // 6) Provare a prelevare fornendo un id utente sbagliato
+        acc1.withdraw(2, 100);
+        acc2.withdraw(1, 10000);
 
         // 7) Controllare nuovamente l'ammontare
+        System.out.println("Gentile "+user1.getName()+" "+user1.getSurname()+", il suo saldo attuale ammonta a: "+acc1.getBalance());
+        System.out.println("Gentile "+user2.getName()+" "+user2.getSurname()+", il suo saldo attuale ammonta a: "+acc2.getBalance());
     }
 }
