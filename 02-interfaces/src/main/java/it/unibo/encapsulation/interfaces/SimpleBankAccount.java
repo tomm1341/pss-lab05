@@ -66,9 +66,6 @@ public class SimpleBankAccount implements BankAccount {
          this.transactions ++;
          if(this.getid() == id){
             this.balance -= amount;
-            if(this.balance < 0){
-                System.out.println("Attenzione! Il conto è in rosso");
-            }
          }else{System.out.println("Error. Invalid user id.");
                 return;}
     }
