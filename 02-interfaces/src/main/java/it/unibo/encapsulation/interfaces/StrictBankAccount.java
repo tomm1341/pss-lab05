@@ -48,8 +48,44 @@ public class StrictBankAccount implements BankAccount{
 
             System.out.println("Error. Invalid user id.");
             return false;
-            
+
         }
+
+    }
+
+    private boolean balanceCheck(final double amount){
+
+        if(this.balance <= 0){
+
+            System.out.println("Your balance is below 0. No withdrawing allowed.");
+            return false;
+
+        }
+
+        if(this.balance < amount){
+            
+            System.out.println("Error. Your balance is too low.");
+            return false;
+
+        } else {
+
+            return true;
+
+        }
+
+    }
+
+    public void deposit(final int id, final double amount){
+
+        if(transactionCheck(id)){
+
+            this.balance += amount;    
+
+        }
+
+    }
+
+    public void withdraw(final int id, final double amount){
 
     }
 
