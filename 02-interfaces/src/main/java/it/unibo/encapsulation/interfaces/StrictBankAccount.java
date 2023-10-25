@@ -87,6 +87,12 @@ public class StrictBankAccount implements BankAccount{
 
     public void withdraw(final int id, final double amount){
 
+        if(balanceCheck(amount)){
+
+            this.balance -= amount;
+
+        }
+
     }
 
 
