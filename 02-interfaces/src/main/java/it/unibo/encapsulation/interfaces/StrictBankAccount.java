@@ -95,5 +95,14 @@ public class StrictBankAccount implements BankAccount{
 
     }
 
+    public void depositFromATM(final int id, final double amount){
+
+        if(transactionCheck(id)){
+
+            this.balance += amount - StrictBankAccount.ATM_TRANSACTION_FEE;
+
+        }
+
+    }
 
 }
