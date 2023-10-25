@@ -45,10 +45,15 @@ public class SimpleBankAccount implements BankAccount {
     private boolean transactionCheck(final int id){ //this function is used to check the user id in every method and to increment transaction value
 
         if (this.getid() == id){
+
             this.transactions ++;
             return true;
+
         } else {
+            
+            System.out.println("Error. Invalid user id."); 
             return false;
+
         }
     }
 
@@ -60,10 +65,10 @@ public class SimpleBankAccount implements BankAccount {
          */
 
         if(transactionCheck(id)){
+
             this.balance += amount;
-        }   else {
-                System.out.println("Error. Invalid user id.");        
-            }
+
+        }
     }
 
     public void withdraw(final int id, final double amount) {
@@ -74,10 +79,10 @@ public class SimpleBankAccount implements BankAccount {
          */
 
          if(transactionCheck(id)){
+
             this.balance -= amount;
-         } else { 
-            System.out.println("Error. Invalid user id.");
-            }
+
+         }
     }
 
     public void depositFromATM(final int id, final double amount) {
@@ -88,11 +93,10 @@ public class SimpleBankAccount implements BankAccount {
          * l'id utente corrisponde
          */
         if(transactionCheck(id)){
-            this.balance += (amount - SimpleBankAccount.ATM_TRANSACTION_FEE);
-        } else {
-            System.out.println("Error. Invalid user id.");
-            }
 
+            this.balance += amount - SimpleBankAccount.ATM_TRANSACTION_FEE;
+
+        }
     }
 
     public void withdrawFromATM(final int id, final double amount) {
@@ -104,9 +108,9 @@ public class SimpleBankAccount implements BankAccount {
          * corrisponde
          */
         if(transactionCheck(id)){
-            this.balance -= (amount + SimpleBankAccount.ATM_TRANSACTION_FEE);
-        } else { 
-            System.out.println("Error. Invalid user id.");
+
+            this.balance -= amount + SimpleBankAccount.ATM_TRANSACTION_FEE;
+
         }
     }
 
@@ -115,9 +119,9 @@ public class SimpleBankAccount implements BankAccount {
          * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
          */
         if(this.getid() == id){
+
             this.balance -= 0;
-        } else {
-            System.out.println("Error. Invalid user id.");
-            }
+
+        }
     }
 }
