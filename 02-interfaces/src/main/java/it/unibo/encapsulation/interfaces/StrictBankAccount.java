@@ -37,7 +37,21 @@ public class StrictBankAccount implements BankAccount{
         return this.transactions;
     }
 
-    //private boolean transactionCheck(int)
+    private boolean transactionCheck(final int id){
+
+        if(this.getid() == id){
+
+            this.transactions ++;
+            return true;
+
+        } else {
+
+            System.out.println("Error. Invalid user id.");
+            return false;
+            
+        }
+
+    }
 
 
 }
