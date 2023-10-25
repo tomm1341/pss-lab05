@@ -1,0 +1,43 @@
+/** Si implementi in autonomia la classe `StrictBankAccount`, tale che:
+    - `StrictBankAccount` implementa `BankAccount`
+    - Le operazioni sul conto dovranno essere abilitate solo se lo user id corrisponde a quello a cui il conto è stato associato
+    - Non dovrà essere possibile effettuare dei prelievi se l'ammontare da prelevare specificato è superiore alla disponibilità corrente del conto. Se il caso si verifica, le operazioni di prelievo non dovranno fare nulla.
+    - Le spese di gestione dovranno essere calcolate come segue: al costo fisso di 5 Euro andrà aggiunto un costo variabile di 0.1 euro per ciascuna transazione effettuata */
+
+package it.unibo.encapsulation.interfaces;
+
+public class StrictBankAccount implements BankAccount{
+    
+    //Inizializzo i campi
+    private double balance;
+    private int transactions;
+    static double ATM_TRANSACTION_FEE = 1;
+    private final int id;
+
+
+    //Creo un costruttore pubblico che prenda in ingresso i dati dell'utente
+    public StrictBankAccount(final int id, final double balance){
+
+        this.id = id;
+        this.balance = balance;
+
+    }
+
+    //Aggiungo i vari selettori per ottenere i campi
+
+    public int getid(){
+        return this.id;
+    }
+
+    public double getBalance(){
+        return this.balance;
+    }
+
+    public int getTransactionsCount(){
+        return this.transactions;
+    }
+
+    //private boolean transactionCheck(int)
+
+
+}
