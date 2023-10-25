@@ -42,10 +42,13 @@ public class SimpleBankAccount implements BankAccount {
         return this.transactions;
     }
 
-    private void transactionCheck(final int id){
-        this.transactions ++;
+    private boolean transactionCheck(final int id){ //this function is used to check the user id in every method and to increment transaction value
+
         if (this.getid() == id){
-            
+            this.transactions ++;
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -56,8 +59,7 @@ public class SimpleBankAccount implements BankAccount {
          * corrisponde
          */
 
-        this.transactions ++;
-        if (this.getid() == id){
+        if(transactionCheck(id)){
             this.balance += amount;
         }   else {
                 System.out.println("Error. Invalid user id.");        
@@ -71,8 +73,7 @@ public class SimpleBankAccount implements BankAccount {
          * Il prelievo va a buon fine solo se l'id utente corrisponde
          */
 
-         this.transactions ++;
-         if(this.getid() == id){
+         if(transactionCheck(id)){
             this.balance -= amount;
          } else { 
             System.out.println("Error. Invalid user id.");
@@ -86,8 +87,7 @@ public class SimpleBankAccount implements BankAccount {
          * all'uso dell'ATM (bancomat) Nota: il deposito va a buon fine solo se
          * l'id utente corrisponde
          */
-        this.transactions ++;
-        if(this.getid() == id){
+        if(transactionCheck(id)){
             this.balance += (amount - SimpleBankAccount.ATM_TRANSACTION_FEE);
         } else {
             System.out.println("Error. Invalid user id.");
@@ -103,8 +103,7 @@ public class SimpleBankAccount implements BankAccount {
          * negativo) - Il prelievo va a buon fine solo se l'id utente
          * corrisponde
          */
-        this.transactions ++;
-        if(this.getid() == id){
+        if(transactionCheck(id)){
             this.balance -= (amount + SimpleBankAccount.ATM_TRANSACTION_FEE);
         } else { 
             System.out.println("Error. Invalid user id.");
