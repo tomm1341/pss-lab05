@@ -1,4 +1,5 @@
 package it.unibo.composition;
+import java.util.Arrays;
 
 public class Exam {
 
@@ -57,6 +58,18 @@ public class Exam {
 
     public Student[] getStudents(){
         return this.students;
+    }
+
+    public String toString() {
+        return "Exam{" +
+                "id=" + id +
+                ", maxStudents=" + maxStudents +
+                ", registeredStudents=" + registeredStudents +
+                ", courseName='" + courseName + '\'' +
+                ", professor=" + professor +
+                ", examRoom=" + examRoom +
+                ", students=" + Arrays.toString(students) +
+                '}';
     }
 
     /**********************/
