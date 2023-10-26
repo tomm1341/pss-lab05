@@ -61,22 +61,22 @@ public class Exam {
     }
 
     public String toString() {
-        return "Exam{" +
+        return /*"Exam{" +
                 "id=" + id +
                 ", maxStudents=" + maxStudents +
                 ", registeredStudents=" + registeredStudents +
                 ", courseName='" + courseName + '\'' +
                 ", professor=" + professor +
                 ", examRoom=" + examRoom +
-                ", students=" + Arrays.toString(students) +
-                '}';
+                ", students=" +*/ Arrays.toString(students); /*+
+                '}';*/
     }
 
     /**********************/
 
     public boolean verifyAvailablePlaces(){
 
-        if(this.students.length < this.maxStudents){
+        if(this.registeredStudents < this.maxStudents){
             return true;
         } else {
             System.out.println("Error. No available places left for the current exam.");
