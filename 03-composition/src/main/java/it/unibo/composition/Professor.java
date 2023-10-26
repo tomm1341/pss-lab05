@@ -65,6 +65,8 @@ public class Professor implements User{
 
             courses[index] = newCourse;
 
+        } else {
+            System.out.println("Error. Invalid index.");
         }
 
     }
