@@ -18,7 +18,19 @@ public class Professor implements User{
 
     }
 
-    
+    //sostituisce il corso all'indice `index` con quello fornito in input
+
+    public void replaceCourse(String course, int index){
+
+       /*  if(index > 0 && index < {
+
+            if(courses[i] == index)
+
+        }*/
+
+    }
+
+
 
 
 }
