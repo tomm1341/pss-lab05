@@ -58,15 +58,30 @@ public class TestBankAccount {
         /*
          * 8) Qual è il risultato e perché?
          */
+
+        //Il primo Account va in negativo perché SimpleBankAccount lo consente, mentre nel secondo (StrictBankAccount) viene bloccata l'operazione di withdraw
+
         /*
          * 9) Depositare nuovamente €10000 in entrambi i conti
          */
+
+        acc1.deposit(user1.getUserID(), 10000);
+        acc2.deposit(user2.getUserID(), 10000);
+
         /*
-         * 10) Invocare il metodo computeManagementFees su entrambi i conti
+         * 10) Invocare il metodo chargeManagementFees su entrambi i conti
          */
+
+        acc1.chargeManagementFees(user1.getUserID());
+        acc2.chargeManagementFees(user2.getUserID());
+
         /*
          * 11) Stampare a video l'ammontare corrente
          */
+
+        System.out.println("[User 1]: " + user1.getName() + " " + user1.getSurname() + " current balance: " + acc1.getBalance());
+        System.out.println("[User 2]: " + user2.getName() + " " + user2.getSurname() + " current balance: " + acc2.getBalance());
+
         /*
          * 12) Qual è il risultato e perché?
          */
