@@ -26,7 +26,7 @@ public class Exam {
         this.courseName = courseName;
         this.professor = professor;
         this.examRoom = examRoom;
-        this.students = students;
+        this.students = new Student[maxStudents];
     }
 
     /*********** SELECTORS ***********/
@@ -74,7 +74,9 @@ public class Exam {
 
     public void registerStudent(Student student){
 
-        if(verifyAvailablePlaces())
+        if(verifyAvailablePlaces()){
+            this.students
+        }
 
     }
 }
