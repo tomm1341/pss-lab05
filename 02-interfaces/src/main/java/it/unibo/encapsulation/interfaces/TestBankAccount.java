@@ -12,6 +12,10 @@ public class TestBankAccount {
         /*
          * 2) Creare l' AccountHolder relativo a Alex Bianchi con id 2
          */
+
+        final AccountHolder user1 = new AccountHolder("Andrea", "Rossi", 1);
+        final AccountHolder user2 = new AccountHolder("Alex", "Bianchi", 2);
+        
         /*
          * 3) Dichiarare due variabili di tipo BankAccount ed inizializzarle,
          * rispettivamente, con oggetti di tipo SimpleBankAccount per il conto di
