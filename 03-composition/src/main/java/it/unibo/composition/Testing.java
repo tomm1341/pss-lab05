@@ -26,7 +26,8 @@ public class Testing {
         // 4) Creare due esami, uno con nMaxStudents=10, l'altro con
         // nMaxStudents=2
 
-        Exam exam1 = new Exam(1, 10, 0, "Latino", professor1, room2, null)
+        Exam exam1 = new Exam(1, 10, 0, "Latino", professor1, room2, null);
+        Exam exam2 = new Exam(2, 2, 0, "Informatica", professor2, room1, null);
 
         // 5) Iscrivere tutti e 3 gli studenti agli esami
 
