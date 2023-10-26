@@ -69,13 +69,9 @@ public class Professor implements User{
 
     }
 
-    public void repalceAllCourses(String[]newCourses){
+    public void repalceAllCourses(String[] newCourses){
 
-        for(int i=0; i<courses.length; ++i){
-
-            courses[i] = newCourses[i];
-
-        }
+        this.courses = newCourses;
 
     }
 
