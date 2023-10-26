@@ -61,5 +61,20 @@ public class Exam {
 
     /**********************/
 
-    
+    public boolean verifyAvailablePlaces(){
+
+        if(this.students.length < this.maxStudents){
+            return true;
+        } else {
+            System.out.println("Error. No available places left for the current exam.");
+            return false;
+        }
+
+    }
+
+    public void registerStudent(Student student){
+
+        if(verifyAvailablePlaces())
+
+    }
 }
