@@ -12,6 +12,7 @@ public class StrictBankAccount implements BankAccount{
     private double balance;
     private int transactions;
     static double ATM_TRANSACTION_FEE = 1;
+    static double MANAGEMENT_FEES_COST = 0.1;
     private final int id;
 
 
@@ -113,6 +114,18 @@ public class StrictBankAccount implements BankAccount{
             this.balance -= amount + StrictBankAccount.ATM_TRANSACTION_FEE;
             
         }  
+
+    }
+
+    public void chargeManagementFees(final int id){
+
+        double cost = 5;
+        double totalCharge;
+
+        cost += StrictBankAccount.MANAGEMENT_FEES_COST;
+        totalCharge = cost * this.transactions;
+
+        this.balance -= totalCharge;
 
     }
 
