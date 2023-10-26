@@ -2,6 +2,7 @@ package it.unibo.composition;
 
 public class Professor implements User{
     
+    private static final String DOT = ".";
     private final int id;
     private String name;
     private String surname;
@@ -17,6 +18,44 @@ public class Professor implements User{
         this.courses = courses;
 
     }
+
+    public String toString() {
+        return "Student ["
+            + "name=" + this.name
+            + ", surname=" + this.surname
+            + ", id=" + this.id
+            + ", courses=" + this.courses
+            + "]";
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getSurname(){
+        return this.surname;
+    }
+
+    public String getPassword(){
+        return this.password;
+    }
+
+    public String[] getCourses(){
+        return this.courses;
+    }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public String getUsername(){
+        return this.name + Professor.DOT + this.surname;
+    }
+
+    public String getDescription(){
+        return this.toString();
+    }
+
 
     //sostituisce il corso all'indice `index` con quello fornito in input
 
