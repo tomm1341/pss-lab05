@@ -75,7 +75,7 @@ public class Exam {
     public void registerStudent(Student student){
 
         if(verifyAvailablePlaces()){
-            this.students
+            students[registeredStudents] = student;
         }
 
     }
