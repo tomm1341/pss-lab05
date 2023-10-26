@@ -76,6 +76,7 @@ public class Exam {
 
         if(verifyAvailablePlaces()){
             students[registeredStudents] = student;
+            registeredStudents ++;
         }
 
     }
