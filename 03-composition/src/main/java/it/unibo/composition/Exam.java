@@ -29,6 +29,37 @@ public class Exam {
         this.students = students;
     }
 
-    
+    /*********** SELECTORS ***********/
+
+    public int getId(){
+        return this.id;
+    }
+
+    public int getMaxStudents(){
+        return this.maxStudents;
+    }
+
+    public int getRegisteredStudents(){
+        return this.registeredStudents;
+    }
+
+    public String getCourseName(){
+        return this.courseName;
+    }
+
+    public Professor getProfessor(){
+        return this.professor;
+    }
+
+    public ExamRoom getExamRoom(){
+        return this.examRoom;
+    }
+
+    public Student[] getStudents(){
+        return this.students;
+    }
+
+    /**********************/
+
     
 }
