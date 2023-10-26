@@ -69,6 +69,7 @@ public class StrictBankAccount implements BankAccount{
 
         } else {
 
+            this.transactions ++;
             return true;
 
         }
@@ -102,6 +103,16 @@ public class StrictBankAccount implements BankAccount{
             this.balance += amount - StrictBankAccount.ATM_TRANSACTION_FEE;
 
         }
+
+    }
+
+    public void withdrawFromATM(final int id, final double amount){
+
+        if(balanceCheck(amount)){
+
+            this.balance -= amount + StrictBankAccount.ATM_TRANSACTION_FEE;
+            
+        }  
 
     }
 
