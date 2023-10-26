@@ -31,8 +31,18 @@ public class Testing {
 
         // 5) Iscrivere tutti e 3 gli studenti agli esami
 
-        
+        exam1.registerStudent(student1);
+        exam1.registerStudent(student2);
+        exam1.registerStudent(student3);
 
-        // 6) Stampare in stdout la rapresentazione in stringa dei due esami
+        exam2.registerStudent(student1);
+        exam2.registerStudent(student2);
+        exam2.registerStudent(student3);
+
+        // 6) Stampare in stdout la rappresentazione in stringa dei due esami
+
+        System.out.println(exam1.toString());
+        System.out.println(exam2.toString());
+
     }
 }
